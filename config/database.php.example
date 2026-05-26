@@ -1,0 +1,25 @@
+<?php
+class Database {
+    // AJUSTE COM OS DADOS DO SEU SERVIDOR ONLINE:
+    private $host = "localhost/"; 
+    private $db_name = "finfive_db"; 
+    private $username = "root";
+    private $password = "";
+    public $conn;
+
+    public function getConnection() {
+        $this->conn = null;
+        try {
+            $this->conn = new PDO("mysql:host=" . $this->host . ";dbname=" . $this->db_name, $this->username, $this->password);
+            $this->conn->exec("set names utf8");
+            
+            // Segurança extra para o ambiente online
+            $this->conn->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        } catch(PDOException $exception) {
+            // Em produção online, nunca exiba o erro real por questões de segurança
+            die("Erro ao conectar com o banco de dados de forma segura.");
+        }
+        return $this->conn;
+    }
+}
