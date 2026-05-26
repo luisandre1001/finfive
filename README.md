@@ -47,14 +47,14 @@ O **FINFIVE** adota padrões rigorosos de segurança para proteger informações
 
 1.  **Clonar o Repositório:**
     ```bash
-    git clone [https://github.com/seu-usuario/finfive.git](https://github.com/seu-usuario/finfive.git)
+    git clone [https://github.com/luisandre1001/finfive.git](https://github.com/luisandre1001/finfive.git)
     ```
     *(Ou descarregue o arquivo .zip do repositório e extraia dentro da pasta `htdocs` do seu XAMPP).*
 
 2.  **Configurar a Base de Dados:**
     * Aceda ao seu `http://localhost/phpmyadmin/`.
     * Crie uma nova base de dados chamada `finfive`.
-    * Clique na base de dados criada, vá à aba **Importar**, selecione o ficheiro localizado em `/database/schema.sql` (ou o nome do seu arquivo SQL) e execute.
+    * Clique na base de dados criada, vá à aba **Importar**, selecione o ficheiro localizado em `/database/finfive.sql` (ou o nome do seu arquivo SQL) e execute.
 
 3.  **Configurar as Credenciais:**
     * Na pasta `config/`, duplique o ficheiro `database.php.example` e renomeie a cópia para `database.php`.
@@ -73,7 +73,7 @@ O **FINFIVE** adota padrões rigorosos de segurança para proteger informações
 
 ## 📄 Licença
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+Este projeto está sob a licença MIT. Veja o arquivo (LICENSE) para mais detalhes.
 
 ---
-Developed with 💻 and ☕ by [O Seu Nome].
+Developed with 💻 and ☕ by Luís Américo André.
